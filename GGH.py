@@ -3,7 +3,14 @@ import random
 import numpy.linalg as la
 
 class GGH:
+    """
+    This is a class for GGH crypto system
+    """
     def __init__(self,n = 3,l = 4,sigma = 1):
+        """
+        Parameters:
+            n(int): size of message
+        """
         self.n = n
         self.l=l
         self.generate_R()
@@ -51,6 +58,6 @@ class GGH:
         for i in B:
             length*=la.norm(i)
         return((la.det(B)/length)**(1/len(B)))
-    
+
     # def decrypt(self,c):
     #     return la.solve(self.B,self.R@np.round(la.solve(self.R,c)))

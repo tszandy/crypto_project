@@ -5,7 +5,17 @@ import fractions
 from utils import *
 
 class NTRU:
+    """
+    This is a class for NTRU crypto system
+    """
     def __init__(self,n=7,q=31,p=3,d_f=3,d_g=2,d_r=2):
+        """
+        Parameters:
+            n(int): size of message
+            q(int):prime
+            p(int):prime
+            
+        """
         self.n=n
         self.q=q
         self.p=p

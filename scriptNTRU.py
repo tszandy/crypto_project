@@ -1,14 +1,13 @@
 import numpy as np
 import numpy.linalg as la
-from utils import *
-
+import NTRU
 
 n=60
 for n in range(400,1010):
     print('n',n)
     q=101
     p=5
-    import NTRU
+
     N=NTRU.NTRU(n=n,q=q,p=p)
     # m=np.zeros((n,1))
     m=np.random.randint(low=0,high=p,size=(n,1))
@@ -17,7 +16,7 @@ for n in range(400,1010):
     # print('c',c)
     new_m=N.decrypt(c)
     # print('new_m',new_m)
-    print(m-new_m)
+    # print(m-new_m)
     print('count',N.count)
 
 
